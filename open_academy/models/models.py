@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from odoo import models
 # from odoo import models, fields, api
 
 
@@ -8,7 +7,7 @@ from odoo import models
 #     _description = 'open_academy.open_academy'
 
 #     name = fields.Char()
-#     value = fields.Integer()
+    # value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
 #     description = fields.Text()
 #
@@ -16,6 +15,8 @@ from odoo import models
 #     def _value_pc(self):
 #         for record in self:
 #             record.value2 = float(record.value) / 100
-class course(models.Model):
-    _name = 'open_academy_course'
-    _description = 'open_academy.course'
+# class course(models.Model):
+#     _name = 'open_academy_course'
+#     _description = 'open_academy.course'
+    
+
