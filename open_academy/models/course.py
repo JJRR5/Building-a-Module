@@ -6,4 +6,7 @@ class course(models.Model):
     _description = 'open_academy.course'
     # _title = "Javascript for beginners"
     
+    name = fields.Char()
+    description = fields.Text()
+    
     
