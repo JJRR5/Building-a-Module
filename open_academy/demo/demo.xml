@@ -1,30 +1,19 @@
 <odoo>
-    <data>
-<!--
-          <record id="object0" model="open_academy.open_academy">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
-          </record>
+  <data>
+    <record id="course0" model="open_academy.course">
+      <field name="name">Course 0</field>
+      <!-- <fiel name="title">Javascript for begginers</fiel> -->
+      <field name="description">This is the first course</field>
+    </record>
 
-          <record id="object1" model="open_academy.open_academy">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
+    <record id="course1" model="open_academy.course">
+      <field name="name">Course 1</field>
+      <field name="description">This is the second course</field>
+    </record>
 
-          <record id="object2" model="open_academy.open_academy">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
-
-          <record id="object3" model="open_academy.open_academy">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
-
-          <record id="object4" model="open_academy.open_academy">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
--->
-    </data>
+    <record id="course2" model="open_academy.course">
+      <field name="name">Course 2</field>
+      <field name="description">This is the third course</field>
+    </record>
+  </data>
 </odoo>
