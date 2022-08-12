@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+      <record model="open_academy.course" id="course0">
+        <field name="name">Javascript Course</field>
+        <field name="description">Javascript Course</field>
+      </record>
+      <record model="open_academy.course" id="course0">
+        <field name="name">React Course</field>
+        <field name="description">React Course</field>
+      </record>
+      <record model="open_academy.course" id="course0">
+        <field name="name">Python Course</field>
+        <field name="description">Python Course</field>
+      </record>
+    </data>
+</odoo>
