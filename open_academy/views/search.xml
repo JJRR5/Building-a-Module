@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<odoo>
+    <record  model="ir.ui.view" id="view_course_search">
+        <field name="name">Search</field>
+        <field name="model">open_academy.course</field>
+
+        <field name="arch" type="xml">
+            <search>
+                <field name="title"/>
+                <field name="description"/>
+            </search>
+        </field>
+    </record>
+</odoo>
+
+
+
+
+
+
+

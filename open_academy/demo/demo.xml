@@ -1,18 +1,21 @@
+<?xml version="1.0"?>
 <odoo>
   <data>
     <record id="course0" model="open_academy.course">
       <field name="name">Course 0</field>
-      <!-- <fiel name="title">Javascript for begginers</fiel> -->
+      <field name="title">Javascript</field>
       <field name="description">This is the first course</field>
     </record>
 
     <record id="course1" model="open_academy.course">
       <field name="name">Course 1</field>
+      <field name="title">React</field>
       <field name="description">This is the second course</field>
     </record>
 
     <record id="course2" model="open_academy.course">
       <field name="name">Course 2</field>
+      <field name="title">Python</field>
       <field name="description">This is the third course</field>
     </record>
   </data>
