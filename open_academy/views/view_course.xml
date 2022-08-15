@@ -4,7 +4,6 @@
         <field name="res_model">open_academy.course</field>
         <field name="view_mode">tree,form</field>
     </record>
-
-    <menuitem id="menu_courses"  name="Courses"  action="action_menu_courses"/>
+    
 </odoo>
 

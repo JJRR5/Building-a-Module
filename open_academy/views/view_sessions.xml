@@ -1,0 +1,8 @@
+<odoo>
+    <record model="ir.actions.act_window" id="action_menu_sessions">
+        <field name="name">Sessions</field>
+        <field name="res_model">open_academy.sessions</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

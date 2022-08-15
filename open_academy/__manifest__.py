@@ -20,9 +20,11 @@
 
     # always loaded
     'data': [
-        'views/menu.xml',
         'views/form.xml',
         'views/search.xml',
+        'views/view_course.xml',
+        'views/view_sessions.xml',
+        'views/menus.xml',
         'security/ir.model.access.csv',
     ],
     # only loaded in demonstration mode
