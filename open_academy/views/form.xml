@@ -11,6 +11,9 @@
                         <group>
                             <field name="name"/>
                         </group>
+                        <group>
+                            <field name="session_id"/>
+                        </group>
                         <notebook>
                             <page string="Description">
                                 <field name="description"/>
