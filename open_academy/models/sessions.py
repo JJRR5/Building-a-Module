@@ -12,5 +12,6 @@ class sessions(models.Model):
     instructor_id = fields.Many2one('res.partner')
     courses_id = fields.Many2one('open_academy.course') 
     attendees_ids = fields.Many2many("res.partner",string="Attendees")
+    stash = 1
     
     
