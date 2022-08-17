@@ -1,4 +1,4 @@
-from odoo import models,fields
+from odoo import models, fields
 
 
 class sessions(models.Model):
@@ -11,7 +11,4 @@ class sessions(models.Model):
     number_of_seats = fields.Integer()
     instructor_id = fields.Many2one('res.partner')
     courses_id = fields.Many2one('open_academy.course') 
-    attendees_ids = fields.Many2many("res.partner",string="Attendees")
-    stash = 1
-    
-    
+    attendees_ids = fields.Many2many("res.partner", string="Attendees")

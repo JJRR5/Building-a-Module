@@ -1,4 +1,4 @@
-from odoo import models,fields
+from odoo import models, fields
 
 
 class course(models.Model):
@@ -11,5 +11,3 @@ class course(models.Model):
     description = fields.Text()
     responsible_user_id = fields.Many2one('res.users')
     session_id = fields.One2many('open_academy.sessions','courses_id')   
-
-
