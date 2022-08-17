@@ -9,5 +9,3 @@ class course(models.Model):
     name = fields.Char()
     title = fields.Text()
     description = fields.Text()
-    
-    

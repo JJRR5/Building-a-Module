@@ -9,5 +9,3 @@ class sessions(models.Model):
     duration = fields.Integer()
     number_of_seats = fields.Integer()
     
-    
-    
