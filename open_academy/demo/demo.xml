@@ -2,21 +2,18 @@
 <odoo>
   <data>
     <record id="course0" model="open_academy.course">
-      <field name="name">Course 0</field>
-      <field name="title">Javascript</field>
-      <field name="description">This is the first course</field>
+      <field name="name">Javascript for begginers</field>
+      <field name="description">Became an expert in just about 3 weeks</field>
     </record>
 
     <record id="course1" model="open_academy.course">
-      <field name="name">Course 1</field>
-      <field name="title">React</field>
-      <field name="description">This is the second course</field>
+      <field name="name">React from scratch</field>
+      <field name="description">Master the new javascript library</field>
     </record>
 
     <record id="course2" model="open_academy.course">
-      <field name="name">Course 2</field>
-      <field name="title">Python</field>
-      <field name="description">This is the third course</field>
+      <field name="name">Python for I.A</field>
+      <field name="description">Became an expert implementing I.A. models</field>
     </record>
   </data>
 </odoo>

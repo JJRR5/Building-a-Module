@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <odoo>
-    <record  model="ir.ui.view" id="view_course_search">
+    <record id="view_course_search"  model="ir.ui.view" >
         <field name="name">Search</field>
         <field name="model">open_academy.course</field>
 

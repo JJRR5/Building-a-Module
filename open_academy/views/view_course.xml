@@ -1,5 +1,5 @@
 <odoo>
-    <record model="ir.actions.act_window" id="action_menu_courses">
+    <record id="action_menu_courses" model="ir.actions.act_window">
         <field name="name">Courses</field>
         <field name="res_model">open_academy.course</field>
         <field name="view_mode">tree,form</field>
