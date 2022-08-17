@@ -20,7 +20,7 @@
 
     # always loaded
     'data': [
-        'views/form.xml',
+        'views/course_form.xml',
         'views/search.xml',
         'views/view_course.xml',
         'views/view_sessions.xml',
