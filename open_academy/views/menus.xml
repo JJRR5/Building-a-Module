@@ -1,6 +1,0 @@
-<odoo>
-    <menuitem id="menu_root" name="Courses"></menuitem>
-    <menuitem id="menu_list" name="Courses" parent="menu_root"/>
-    <menuitem id="menu_courses"  name="Courses"  action="action_menu_courses" parent="menu_list"/>
-    <menuitem id="menu_sessions" parent="menu_list"  name="Sessions"  action="action_menu_sessions" />
-</odoo>

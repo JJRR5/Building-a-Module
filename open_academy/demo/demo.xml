@@ -1,6 +1,4 @@
-<?xml version="1.0"?>
-<odoo>
-  <data>
+<odoo noupdate="1">
     <record id="course0" model="open_academy.course">
       <field name="name">Javascript for begginers</field>
       <field name="description">Became an expert in just about 3 weeks</field>
@@ -15,5 +13,4 @@
       <field name="name">Python for I.A</field>
       <field name="description">Became an expert implementing I.A. models</field>
     </record>
-  </data>
 </odoo>

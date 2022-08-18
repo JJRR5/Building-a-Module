@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
 # from odoo import http
-
 
 # class OpenAcademy(http.Controller):
 #     @http.route('/open_academy/open_academy', auth='public')
