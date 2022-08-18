@@ -2,7 +2,7 @@ from odoo import models, fields
 
 
 class Session(models.Model):
-    _name = 'sessions'
+    _name = 'session'
     name = fields.Char(required=True)
     start_date = fields.Date()
     duration = fields.Integer()

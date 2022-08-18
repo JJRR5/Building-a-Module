@@ -18,11 +18,8 @@
 
     # always loaded
     'data': [
-        'views/course_view_form.xml',
-        'views/course_view_search.xml',
-        'views/course_action.xml',
-        'views/sessions_action.xml',
-        'views/course_menu.xml',
+        'views/session_views.xml',
+        'views/course_views.xml',
         'security/ir.model.access.csv',
     ],
     # only loaded in demonstration mode
