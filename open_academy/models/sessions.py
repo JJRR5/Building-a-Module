@@ -1,9 +1,9 @@
 from odoo import models, fields
 
 
-class Sessions(models.Model):
-    _name = 'open_academy.sessions'
-    name = fields.Char()
+class Session(models.Model):
+    _name = 'sessions'
+    name = fields.Char(required=True)
     start_date = fields.Date()
     duration = fields.Integer()
     number_of_seats = fields.Integer()

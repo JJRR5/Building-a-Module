@@ -1,7 +1,7 @@
 <odoo>
     <record id="sessions_action" model="ir.actions.act_window" >
         <field name="name">Sessions</field>
-        <field name="res_model">open_academy.sessions</field>
+        <field name="res_model">sessions</field>
         <field name="view_mode">tree,form</field>
     </record>
 

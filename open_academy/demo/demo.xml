@@ -1,15 +1,15 @@
 <odoo noupdate="1">
-    <record id="course0" model="open_academy.course">
+    <record id="course_demp_javascript" model="open_academy.course">
       <field name="name">Javascript for begginers</field>
       <field name="description">Became an expert in just about 3 weeks</field>
     </record>
 
-    <record id="course1" model="open_academy.course">
+    <record id="course_demo_react" model="open_academy.course">
       <field name="name">React from scratch</field>
       <field name="description">Master the new javascript library</field>
     </record>
 
-    <record id="course2" model="open_academy.course">
+    <record id="course_demp_python" model="open_academy.course">
       <field name="name">Python for I.A</field>
       <field name="description">Became an expert implementing I.A. models</field>
     </record>
