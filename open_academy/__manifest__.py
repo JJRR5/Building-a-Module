@@ -18,9 +18,9 @@
 
     # always loaded
     'data': [
+        'security/ir.model.access.csv',
         'views/session_views.xml',
         'views/course_views.xml',
-        'security/ir.model.access.csv',
     ],
     # only loaded in demonstration mode
     'demo': [

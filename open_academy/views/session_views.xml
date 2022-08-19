@@ -1,7 +1,10 @@
 <odoo>
-    <record id="sessions_action" model="ir.actions.act_window" >
+    <record id="session_action" model="ir.actions.act_window" >
         <field name="name">Sessions</field>
         <field name="res_model">session</field>
         <field name="view_mode">tree,form</field>
     </record>
+    <menuitem id="session_menu_root" name="Sessions">
+        <menuitem id="session_menu"   name="Sessions Dashboard"  action="session_action" />
+    </menuitem>
 </odoo>

@@ -35,8 +35,7 @@
         <field name="res_model">course</field>
         <field name="view_mode">tree,form</field>
     </record>
-    <menuitem id="course_menu_root" name="Open Academy">
-        <menuitem id="course_menu"  name="Courses"  action="courses_action" /> 
-        <menuitem id="session_menu"   name="Sessions"  action="sessions_action" />
+    <menuitem id="course_menu_root" name="Courses">
+        <menuitem id="course_menu"  name="Courses Dashboard"  action="courses_action" /> 
     </menuitem>
 </odoo>
