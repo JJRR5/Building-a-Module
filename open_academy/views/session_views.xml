@@ -4,5 +4,5 @@
         <field name="res_model">session</field>
         <field name="view_mode">tree,form</field>
     </record>
-    <menuitem id="session_menu"   name="Sessions"  action="session_action" parent="open_academy_menu_root"/>
+    <menuitem id="session_menu" name="Sessions" action="session_action" parent="open_academy_menu_root"/>
 </odoo>

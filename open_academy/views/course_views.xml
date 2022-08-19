@@ -35,5 +35,5 @@
         <field name="res_model">course</field>
         <field name="view_mode">tree,form</field>
     </record>
-    <menuitem id="course_menu"  name="Courses"  action="course_action" parent="open_academy_menu_root"/> 
+    <menuitem id="course_menu" name="Courses" action="course_action" parent="open_academy_menu_root"/> 
 </odoo>
