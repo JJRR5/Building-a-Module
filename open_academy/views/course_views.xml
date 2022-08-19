@@ -30,12 +30,10 @@
             </search>
         </field>
     </record>
-    <record id="courses_action" model="ir.actions.act_window">
+    <record id="course_action" model="ir.actions.act_window">
         <field name="name">Courses</field>
         <field name="res_model">course</field>
         <field name="view_mode">tree,form</field>
     </record>
-    <menuitem id="course_menu_root" name="Courses">
-        <menuitem id="course_menu"  name="Courses Dashboard"  action="courses_action" /> 
-    </menuitem>
+    <menuitem id="course_menu"  name="Courses"  action="course_action" parent="open_academy_menu_root"/> 
 </odoo>
