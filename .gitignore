@@ -1,0 +1,6 @@
+*.pyc
+*.yaml
+.eslintrc.json
+.flake8
+.pylintrc
+.pylintrc-optional
