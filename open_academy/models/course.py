@@ -8,3 +8,5 @@ class Course(models.Model):
     name = fields.Char(required=True)
     title = fields.Text()
     description = fields.Text()
+    responsible_user_id = fields.Many2one('res.users')
+    session_ids = fields.One2many('session', 'course_id')
