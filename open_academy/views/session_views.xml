@@ -1,4 +1,37 @@
 <odoo>
+    <record id="session_view_tree" model="ir.ui.view">
+            <field name="name">session.tree</field>
+            <field name="model">session</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name='name'/>
+                    <field name='taken_seats' widget="progressbar"/>
+                </tree>
+            </field>
+    </record>
+    <record id="session_view_form" model="ir.ui.view">
+        <field name="name">session.form</field>
+        <field name="model">session</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="4">
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="duration"/>
+                    <field name="number_of_seats"/>
+                </group>
+                <group col="4">
+                    <field name="instructor_id"/>
+                    <field name="course_id"/>
+                    <field name="active"/>
+                    <field name="taken_seats" widget="progressbar"/>
+                </group>
+                <group>
+                    <field name="attendees_ids"/>
+                </group>
+            </form>
+        </field>
+    </record>
     <record id="session_action" model="ir.actions.act_window" >
         <field name="name">Sessions</field>
         <field name="res_model">session</field>
