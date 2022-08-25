@@ -20,3 +20,20 @@ class Session(models.Model):
             if record.number_of_seats > 0:
                 taken_seats = round((len(record.attendees_ids) * 100) / record.number_of_seats)
             record.taken_seats = taken_seats
+
+    @api.onchange('number_of_seats','attendees_ids')
+    def _onchange_invalid_values(self):
+        if self.number_of_seats < 0:
+            return {
+                'warning': {
+                'title': "Something bad happened.",
+                'message': "Number of seats must be greater than 0."
+                } 
+            }
+        if len(self.attendees_ids) > self.number_of_seats:
+            return {
+                'warning': {
+                'title': "Something bad happened.",
+                'message': "Number of attendees cannot be greater than the number of available seats."
+                } 
+            }
