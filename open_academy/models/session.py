@@ -1,18 +1,21 @@
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
+from datetime import date, timedelta
 
 
 class Session(models.Model):
     _name = 'session'
     name = fields.Char(required=True)
-    start_date = fields.Date(default=fields.Date.today())
-    duration = fields.Integer()
+    start_date = fields.Date(default=date.today(), required=True)
+    end_date = fields.Date(compute='_compute_end_date')
+    duration = fields.Integer(required=True, string="Duration (days)")
     number_of_seats = fields.Integer()
     instructor_id = fields.Many2one(
         'res.partner', domain='["|", ("is_instructor","=",True), ("teacher_type","!=",False)]'
     )
     course_id = fields.Many2one('course', required=True)
     attendees_ids = fields.Many2many('res.partner')
+    number_of_attendees = fields.Integer(compute='_compute_number_of_attendees', store=True)
     active = fields.Boolean(default=True)
     taken_seats = fields.Integer(compute='_compute_taken_seats')
 
@@ -46,3 +49,14 @@ class Session(models.Model):
         for record in self:
             if record.instructor_id in record.attendees_ids:
                 raise ValidationError("An instructor cannot be an attendee of his own session")
+
+    @api.depends('duration', 'start_date')
+    def _compute_end_date(self):
+        for record in self:
+            difference = timedelta(days=record.duration)
+        self.end_date = self.start_date + difference
+
+    @api.depends('attendees_ids')
+    def _compute_number_of_attendees(self):
+        for record in self:
+            record.number_of_attendees = len(record.attendees_ids)
