@@ -1,4 +1,5 @@
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 
 class Session(models.Model):
@@ -7,7 +8,9 @@ class Session(models.Model):
     start_date = fields.Date(default=fields.Date.today())
     duration = fields.Integer()
     number_of_seats = fields.Integer()
-    instructor_id = fields.Many2one('res.partner', domain='["|", ("is_instructor","=",True), ("teacher_type","!=",False)]')
+    instructor_id = fields.Many2one(
+        'res.partner', domain='["|", ("is_instructor","=",True), ("teacher_type","!=",False)]'
+    )
     course_id = fields.Many2one('course', required=True)
     attendees_ids = fields.Many2many('res.partner')
     active = fields.Boolean(default=True)
@@ -21,19 +24,25 @@ class Session(models.Model):
                 taken_seats = round((len(record.attendees_ids) * 100) / record.number_of_seats)
             record.taken_seats = taken_seats
 
-    @api.onchange('number_of_seats','attendees_ids')
+    @api.onchange('number_of_seats', 'attendees_ids')
     def _onchange_invalid_values(self):
         if self.number_of_seats < 0:
             return {
                 'warning': {
-                'title': "Something bad happened.",
-                'message': "Number of seats must be greater than 0."
-                } 
+                    'title': "Something bad happened.",
+                    'message': "Number of seats must be greater than 0."
+                }
             }
         if len(self.attendees_ids) > self.number_of_seats:
             return {
                 'warning': {
-                'title': "Something bad happened.",
-                'message': "Number of attendees cannot be greater than the number of available seats."
-                } 
+                    'title': "Something bad happened.",
+                    'message': "Number of attendees cannot be greater than the number of available seats."
+                }
             }
+
+    @api.constrains('attendees_ids')
+    def _check_attendees_ids(self):
+        for record in self:
+            if record.instructor_id in record.attendees_ids:
+                raise ValidationError("An instructor cannot be an attendee of his own session")
