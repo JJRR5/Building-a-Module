@@ -5,6 +5,7 @@ from datetime import date, timedelta
 
 class Session(models.Model):
     _name = 'session'
+    _description = 'Session Model'
     name = fields.Char(required=True)
     start_date = fields.Date(default=date.today(), required=True)
     end_date = fields.Date(compute='_compute_end_date')
