@@ -11,6 +11,12 @@
                 </tree>
             </field>
     </record>
+    <record id="session_action_tree" model="ir.actions.act_window" >
+        <field name="name">session.action.tree</field>
+        <field name="res_model">session</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="open_academy.session_view_tree"/>
+    </record>
     <record id="session_view_form" model="ir.ui.view">
         <field name="name">session.form</field>
         <field name="model">session</field>
@@ -33,6 +39,12 @@
             </form>
         </field>
     </record>
+    <record id="session_action_form" model="ir.actions.act_window" >
+        <field name="name">session.action.form</field>
+        <field name="res_model">session</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="open_academy.session_view_form"/>
+    </record>
     <record id="session_view_calendar" model="ir.ui.view">
         <field name="name">session.calendar</field>
         <field name="model">session</field>
@@ -41,6 +53,12 @@
                 <field name="name"/>
             </calendar>
         </field>
+    </record>
+    <record id="session_action_calendar" model="ir.actions.act_window" >
+        <field name="name">session.action.calendar</field>
+        <field name="res_model">session</field>
+        <field name="view_mode">calendar</field>
+        <field name="view_id" ref="open_academy.session_view_calendar"/>
     </record>
     <record id="session_view_gantt"  model="ir.ui.view" >
         <field name="name">session.view.gantt</field>
@@ -55,6 +73,12 @@
             />
         </field>
     </record>
+    <record id="session_action_gantt" model="ir.actions.act_window" >
+        <field name="name">session.action.gantt</field>
+        <field name="res_model">session</field>
+        <field name="view_mode">gantt</field>
+        <field name="view_id" ref="open_academy.session_view_gantt"/>
+    </record>
     <record id="session_view_graph"  model="ir.ui.view" >
         <field name="name">session.view.graph</field>
         <field name="model">session</field>
@@ -64,6 +88,12 @@
                 <field name="number_of_attendees" type="measure"/>
             </graph>
         </field>
+    </record>
+    <record id="session_action_graph" model="ir.actions.act_window" >
+        <field name="name">session.action.graph</field>
+        <field name="res_model">session</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="open_academy.session_view_graph"/>
     </record>
     <record id="session_view_kanban"  model="ir.ui.view" >
         <field name="name">session.view.kanban</field>
@@ -80,6 +110,12 @@
                 </templates>
             </kanban>
         </field>
+    </record>
+    <record id="session_action_kanban" model="ir.actions.act_window" >
+        <field name="name">session.action.kanban</field>
+        <field name="res_model">session</field>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="open_academy.session_view_kanban"/>
     </record>
     <record id="session_action" model="ir.actions.act_window" >
         <field name="name">Sessions</field>

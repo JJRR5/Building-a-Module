@@ -1,4 +1,4 @@
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 from datetime import date, timedelta
 
@@ -32,15 +32,15 @@ class Session(models.Model):
         if self.number_of_seats < 0:
             return {
                 'warning': {
-                    'title': "Something bad happened.",
-                    'message': "Number of seats must be greater than 0."
+                    'title': _("Something bad happened."),
+                    'message': _("Number of seats must be greater than 0.")
                 }
             }
         if len(self.attendees_ids) > self.number_of_seats:
             return {
                 'warning': {
-                    'title': "Something bad happened.",
-                    'message': "Number of attendees cannot be greater than the number of available seats."
+                    'title': _("Something bad happened."),
+                    'message': _("Number of attendees cannot be greater than the number of available seats.")
                 }
             }
 
@@ -48,13 +48,13 @@ class Session(models.Model):
     def _check_attendees_ids(self):
         for record in self:
             if record.instructor_id in record.attendees_ids:
-                raise ValidationError("An instructor cannot be an attendee of his own session")
+                raise ValidationError(_("An instructor cannot be an attendee of his own session"))
 
     @api.depends('duration', 'start_date')
     def _compute_end_date(self):
         for record in self:
             difference = timedelta(days=record.duration)
-        self.end_date = self.start_date + difference
+            record.end_date = record.start_date + difference
 
     @api.depends('attendees_ids')
     def _compute_number_of_attendees(self):
