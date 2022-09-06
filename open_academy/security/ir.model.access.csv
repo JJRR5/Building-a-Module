@@ -1,4 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_course,course,model_course,base.group_user,1,1,1,1
-access_session,session,model_session,base.group_user,1,1,1,1
+access_course,course,model_course,base.group_user,1,0,0,0
+access_session,session,model_session,base.group_user,1,0,0,0
+access_session_manager,session,model_session,open_academy.session_group_manager,1,1,1,1
+access_course_manager,course,model_course,open_academy.session_group_manager,1,1,1,1
 access_open_academy_add_attendees_session,add.attendees.session,model_add_attendees_session,base.group_user,1,1,1,1
