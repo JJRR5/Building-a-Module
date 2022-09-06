@@ -16,6 +16,9 @@
         <field name="model">session</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button id="wizard_session_button" name="%(add_attendees_session_action)d" string="Add Attendees" class="btn-primary" type="action"/>
+                </header>
                 <group>
                     <field name="name"/>
                     <field name="instructor_id"/>

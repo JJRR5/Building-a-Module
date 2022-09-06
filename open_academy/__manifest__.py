@@ -19,6 +19,7 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'wizards/add_attendees_session_views.xml',
         'views/open_academy_views.xml',
         'views/session_views.xml',
         'views/course_views.xml',
