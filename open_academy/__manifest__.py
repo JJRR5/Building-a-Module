@@ -14,7 +14,10 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': [
+        'base',
+        'board',
+    ],
 
     # always loaded
     'data': [
@@ -24,7 +27,9 @@
         'views/open_academy_views.xml',
         'views/session_views.xml',
         'views/course_views.xml',
-        'views/res_partner_views.xml'
+        'views/res_partner_views.xml',
+        'views/open_academy_dashboard_views.xml',
+        'report/session_report.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

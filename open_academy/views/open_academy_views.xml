@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <odoo>
     <!-- This is gonna be the base view in which are going to display the menus of the open academy module -->
     <menuitem id="open_academy_menu_root" name="Open Academy"/>

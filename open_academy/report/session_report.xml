@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="session_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="session">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h1 class="text-center fw-bold mb-5 fs-5 bg-danger"><u>Session Info Report</u></h1>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Start Date</th>
+                                    <th scope="col">End Date</th>
+                                    <th scope="col">Attendees</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><t t-out="session.name"/></td>
+                                    <td><t t-out="session.start_date"/></td>
+                                    <td><t t-out="session.end_date"/></td>
+                                    <td scope="row">
+                                        <ul class="list-group" t-foreach="session.attendees_ids" t-as="attendee">
+                                            <span t-out="attendee.name"/>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    <record id="session_report" model="ir.actions.report">
+        <field name="name">Session Report</field>
+        <field name="model">session</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">open_academy.session_template</field>
+        <field name="report_file">open_academy.session_template</field>
+        <field name="binding_model_id" ref="open_academy.model_session"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

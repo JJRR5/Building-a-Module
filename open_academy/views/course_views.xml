@@ -1,5 +1,22 @@
 <?xml version="1.0"?>
 <odoo>
+    <record id="course_view_tree" model="ir.ui.view">
+            <field name="name">course.tree</field>
+            <field name="model">course</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name='name'/>
+                    <field name='responsible_user_id'/>
+                    <field name='session_ids'/>
+                </tree>
+            </field>
+    </record>
+    <record id="course_action_tree" model="ir.actions.act_window" >
+        <field name="name">course.action.tree</field>
+        <field name="res_model">course</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="open_academy.course_view_tree"/>
+    </record>
     <record id="course_view_form"  model="ir.ui.view">
         <field name="name">course.form</field>
         <field name="model">course</field>
@@ -22,6 +39,12 @@
                 </sheet>
             </form>
         </field>
+    </record>
+    <record id="course_action_form" model="ir.actions.act_window" >
+        <field name="name">course.action.form</field>
+        <field name="res_model">course</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="open_academy.course_view_form"/>
     </record>
     <record id="course_view_search"  model="ir.ui.view" >
         <field name="name">course.view.search</field>
